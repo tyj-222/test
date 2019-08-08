@@ -29,3 +29,10 @@ git config -e --system              git config -e --global(vi ~/.gitconfig)     
      
 [receive]                                       提交代码到github                              
 denyCurrentBranch = updateInstead           git push -u origin master
+
+查看当前app包名
+adb shell dumpsys window w / findstr \/| findstr name
+
+查看指定包名app的详细信息
+adb shell dumpsys package 包名
+
