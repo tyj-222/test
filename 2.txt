@@ -1,0 +1,31 @@
+1，初始化一个本地库                       查看当前目录                              直接创建txt文件并加入内容                       复制
+git init                                      pwd                                echo 'runoob.com' >test.txt                    Ctrl insert(cp)
+             
+2，编辑文件 ，不存在就创建一个             删除文件                                   强制删除                                      粘贴
+vim  文件名                                rm  文件名                               rm -rf 文件名                               Shift insert
+
+3，shift + : q 不保存退出   wq 保存退出          +！强制退出
+ 
+4，查看当前状态                           查看详细修改                             放弃刚才的修改                                   克隆
+git status                                git diff                                git checkout -- 文件名               		git clone gerrit:项目名
+
+5，git add .                          退回到未stage（add）的状态 
+                                        git reset HEAD 文件名
+
+6,提交代码                               获取并更新代码
+git commit -m "注释"                       git pull(git fetch && git rebase origin/master)
+
+7  查看log 分支状态                        查看git日志                  
+git log --graph                            git log            --reverse       --oneline   --graph   --author           --since   --after
+ 
+8， 创建新的branch分支                     切换分支                             创建新的分支，并切换过去
+git branch 分支名                          git checkout 分支名                  git checkout -b  分支名
+
+9，删除分支
+git branch -d 分支名
+
+10,查看系统级别配置                          查看全局级别配置
+git config -e --system              git config -e --global(vi ~/.gitconfig)             (vi ~/.ssh/config )                   vi .git/config
+     
+[receive]                                       提交代码到github                              
+denyCurrentBranch = updateInstead           git push -u origin master
